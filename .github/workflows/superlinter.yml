@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+          with:
+            repository: rsksmart/lumino-light-client-sdk
+            ref: master
+      - uses: actions/checkout@v2
         with:
           repository: rsksmart/rconnect
           ref: master
