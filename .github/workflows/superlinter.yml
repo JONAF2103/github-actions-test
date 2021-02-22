@@ -4,14 +4,16 @@ jobs:
   compile-rconnect:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v1
       - uses: actions/checkout@v2
         with:
           repository: rsksmart/lumino-light-client-sdk
           ref: master
+      - run: npm install
+      - run: npm run build
       - uses: actions/checkout@v2
         with:
           repository: rsksmart/rconnect
           ref: master
-      - uses: actions/setup-node@v1
       - run: npm install
       - run: npm run build
