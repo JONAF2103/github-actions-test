@@ -4,7 +4,7 @@ jobs:
   compile-rconnect:
     runs-on: ubuntu-latest
     steps:
-      - uses: rsksmart/rconnect
+      - uses: rsksmart/rconnect@master
       - uses: actions/setup-node@v1
       - run: npm install
       - run: npm run build
