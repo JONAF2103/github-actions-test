@@ -1,4 +1,4 @@
-name: Compiling Rconnect on Github Actions
+name: Compiling Light Client SDK on Github Actions
 on: [push]
 jobs:
   compile-rconnect:
@@ -10,12 +10,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: rsksmart/lumino-light-client-sdk
-          ref: master
-      - run: npm install
-      - run: npm run build
-      - uses: actions/checkout@v2
-        with:
-          repository: rsksmart/rconnect
           ref: master
       - run: npm install
       - run: npm run build
